@@ -1,0 +1,299 @@
+
+<div class="wrapper">
+ 
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="
+    background-color: #17a2b8;"
+  >
+    <!-- Left navbar links -->
+   
+    <ul class="navbar-nav" >
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"  style="
+        color:whitesmoke;"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a routerLink="/accueil" class="nav-link"  style="
+        color:whitesmoke;">Accueil</a>
+      </li>
+     
+      <!--
+      <li class="nav-item d-none d-sm-inline-block" >
+        <a routerLink="/login" class="nav-link" style="
+        color:whitesmoke;"> <i class="fa fa-user"> </i> Login </a>
+      </li>
+     -->
+    </ul>
+
+ <!--  
+ <ul class="navbar-nav ml-auto">
+  <li class="nav-item d-none d-sm-inline-block" >
+    <a routerLink="/login" class="nav-link" style="
+    color:whitesmoke;"> <i class="fa fa-user"> </i> Login </a>
+  </li>
+ </ul>
+-->
+
+  </nav>   
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-light-primary elevation-4" >
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link" style="background-color: #f8f9fa">
+      <img src="assets/img/port (1).jpg" alt="EPAL Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light" >Capitainerie</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+     
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active" style="
+            background-color: #17a2b8;">
+              
+              <p>
+                Opération de l'admin 
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link" routerLinkActive="active">
+                <i class="far fa-circle nav-icon"></i>
+                
+                  <a  >Gérer les navires
+                  <i class="right fas fa-angle-left"></i>
+                </a>
+              </a>                                                                                                                                            
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/listenav">Liste navires</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/ajouternav">Ajouter navire</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/modifiernav">Modifier navire</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/supprimernav">Supprimer navire</a>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link" routerLinkActive="active">
+                <i class="far fa-circle nav-icon"></i>
+                
+                  <a routerLink="procesverbal" routerLink="/prevision"  >Gérer les consignataires
+                  <i class="right fas fa-angle-left"></i>
+                </a>
+              </a>                                                                                                                                            
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/listcons">Liste consignataires</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/ajoutercons">Ajouter consignataire</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/modifiercons">Modifier  consignataires</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/supprimercons">Supprimer  consignataires</a>
+                  </a>
+                </li>
+              </ul>
+            </li>
+           
+         
+
+             
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link" routerLinkActive="active">
+                <i class="far fa-circle nav-icon"></i>
+                
+                  <a  >Gérer les lignes
+                  <i class="right fas fa-angle-left"></i>
+                </a>
+              </a>                                                                                                                                            
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/listeligne">Liste lignes</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/ajouterligne">Ajouter ligne</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/modifierligne">Modifier ligne</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/supprimerligne">Supprimer ligne</a>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+
+
+            
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link" routerLinkActive="active">
+                <i class="far fa-circle nav-icon"></i>
+                
+                  <a   >Gérer les opérations
+                  <i class="right fas fa-angle-left"></i>
+                </a>
+              </a>                                                                                                                                            
+              <ul class="nav nav-treeview">
+               
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/ajouteropr">Ajouter opération</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/modifieropr">Modifier  opération</a>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <a routerLink="/supprimeropr">Supprimer  opération</a>
+                  </a>
+                </li>
+              </ul>
+            </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+          ___________________________________________________________________________________
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-light">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <!-- <app-footer></app-footer> -->
+  
+<!--   _________________ancien footer_________
+  <footer class="main-footer">
+    Consultez notre site sur 
+    <strong><a href="http://www.portalger.com.dz"> Port d'Alger.dz </a></strong>
+   
+    
+  </footer>
+ -->
+   <!-- Footer -->
+<footer class="main-footer" style="height: 20%;">
+
+  <!-- Footer Links -->
+  <div class="container">
+    
+    
+
+    <!-- Grid row-->
+    
+
+      <!-- Grid column -->
+      <div class="text-right">
+
+        
+
+          <!-- Facebook -->
+          <a class="fb-ic" href="#">
+            <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic"  href="#" >
+            <i class="fab fa-twitter fa-lg white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic"  href="#">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+         
+
+        </div>
+
+      
+      <!-- Grid column -->
+
+      Consultez notre site sur 
+      <strong><a href="http://www.portalger.com.dz"> www.portalger.com.dz </a></strong>
+     <br>
+
+   
+      </div>
+      <!-- Grid column -->
+
+    
+    <!-- Grid row-->
+
+  
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" >Copyright © Entreprise Portuaire d’Alger 2017. Tous droits réservés
+    
+  </div>
+  <!-- Copyright -->
+  
+</footer>
+  
+</div>
+
+
+<router-outlet></router-outlet>

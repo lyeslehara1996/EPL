@@ -1,0 +1,135 @@
+
+    <div class="content-wrapper" style="margin-top: 0%;"> 
+        <div class="container">
+          <div class="center">
+             <h1>Formulaire de modification de navire</h1>
+            
+             
+         <form  [formGroup]="navirForm" #F="ngForm" (ngSubmit)="onUpdateNavir(F)">
+                   <!-- une fois le navire séléctioné ces info seront afficher tl q son num,pavillon tiran d'eaux  jauge brute longeur et la largeur-->
+                   <div class="row col-12">
+                    <div class="form-group">
+                     <label for="num">Numero navire</label>
+                     <input type="number" class="form-control" id="num" formControlName="num" placeholder="" [(ngModel)]="navir.navnum" name="num" ngModel>
+                     <ng-container *ngIf="num?.invalid && num?.touched">
+                      <span class="help-block" style="color: red;" *ngIf="num.errors?.required">ce champs est obligatoire</span>
+                    </ng-container>
+                    </div>
+
+              <div class="form-group">
+               <label for="nom">Nom du navire </label><br>
+               <input type="text" class="form-control" id="nom"  placeholder=""  name="nom" formControlName="nom" [(ngModel)]="navir.navnom"  ngModel>
+               <ng-container *ngIf="nom?.invalid && nom?.touched">
+                <span class="help-block1" style="color: red;" *ngIf="nom.errors?.required">ce champ est obligatoire</span>
+                <span class="help-block1" style="color: red;" *ngIf="nom.errors?.minlength">ce champ doit etre supperieur a 5</span>
+                <span class="help-block1" style="color: red;" *ngIf="nom.errors?.maxlength">ce champ doit etre inferieur a 15</span>
+              </ng-container>
+              </div>
+
+                 <div class="form-group">
+                   <label for="pav">Pavillon du navire </label><br>
+                   <input type="text" class="form-control" id="pav"  placeholder="" [(ngModel)]="navir.pavinav"  name="pav" formControlName="pav"  ngModel>
+                   <ng-container *ngIf="pav?.invalid && pav?.touched">
+                    <span name="blok" class="help-block" style="color: red;" *ngIf="pav.errors?.required">ce champ est obligatoire</span>
+                    <span name="blok" class="help-block" style="color: red;" *ngIf="pav.errors?.minlength">ce champ doit etre supperieur a 5</span>
+                    <span name="blok" class="help-block" style="color: red;" *ngIf="pav.errors?.maxlength">ce champ doit etre inferieur a 15</span>
+                  </ng-container>
+                  </div>
+
+               <br>
+               
+ 
+               <div class="form-group">
+                 <label for="tiran">Tiran d'eaux </label><br>
+                 <input type="number" class="form-control" id="Tiran d'eaux"  placeholder="" [(ngModel)]="navir.navtir"name="tiran" formControlName="tiran" ngModel>
+                 <span class="help-block" style="color: red;" *ngIf="(tiran?.invalid) && (tiran?.touched)"> ce champs est obligatoire</span>
+
+                </div>
+                    
+                 
+ 
+ 
+                     <div class="form-group">
+                       <label for="jb">Jauge Brute </label><br>
+                       <input type="number" class="form-control" id="Jauge Brute"  placeholder="" [(ngModel)]="navir.navjb" formControlName="Jauge" name="Jauge" ngModel>
+                       <span class="help-block" style="color: red;" *ngIf="(Jauge.invalid) && (Jauge.touched)">ce champ est obligatoire</span>
+
+                      </div>
+               
+               
+                
+                 
+ 
+                <div class="form-group">
+                 <label for="port">Le port d'attachement </label><br>
+                 <input type="text" class="form-control" id="port" placeholder="" [(ngModel)]="navir.navport" name="port" formControlName="port"  ngModel>
+                 <ng-container *ngIf="port?.invalid && port?.touched">
+                  <span name="blok" class="help-block" style="color: red;" *ngIf="port.errors?.required">ce champ est obligatoire</span>
+                  <span name="blok" class="help-block" style="color: red;" *ngIf="port.errors?.minlength">ce champ doit etre supperieur a 5</span>
+                  <span name="blok" class="help-block" style="color: red;" *ngIf="port.errors?.maxlength">ce champ doit etre inferieur a 10</span>
+                </ng-container>
+                </div>
+                    
+                
+               <br>
+              
+             
+                    
+               <div class="form-group">
+                 <label for="ctv">Cpct trnsprt vihécule</label><br>
+                     <input type="number" class="form-control" id="ctv" placeholder="" [(ngModel)]="navir.navctv"  name="ctv" formControlName="ctv" ngModel>
+                     <span class="help-block" style="color: red;" *ngIf="(ctv?.invalid) && (ctv?.touched)">ce champ est obligatoire</span>
+  
+               </div>
+                     
+ 
+                     <div class="form-group">
+                       <label for="ctp">Cpct trnsprt passagers</label><br>
+                       <input type="number" class="form-control" id="ctp" placeholder="" [(ngModel)]="navir.navctp" formControlName="ctp" id="ctp" name="ctp" ngModel> 
+                       <span class="help-block" style="color: red;" *ngIf="(ctp?.invalid) && (ctp?.touched)">ce champ est obligatoire</span>
+
+                      </div>
+                        
+                        
+ 
+                         <div class="form-group">
+                           <label for="ctc">Cpct trnsprt conteneur</label><br>
+                           <input type="number" class="form-control" id="ctc" placeholder="" [(ngModel)]="navir.navctc"  id="ctc" name="ctc" formControlName="ctc" ngModel>
+                           <span class="help-block" style="color: red;" *ngIf="(ctc.invalid) && (ctc?.touched)">ce champ est obligatoire</span>
+
+                          </div>
+                            
+              
+             <br>
+             
+ 
+             <div class="form-group">
+               <label for="long">Longueur </label><br>
+               <input type="number" class="form-control" id="long"  placeholder="" [(ngModel)]="navir.navlong" name="long"  formControlName="long" ngModel>
+               <span class="help-block" style="color: red;" *ngIf="(long?.invalid) && (long?.touched)">ce champ est obligatoire</span>
+
+              </div>
+                
+             
+ 
+                 <div class="form-group">
+                   <label for="larg">Largeur </label><br>
+                         <input type="number" class="form-control" id="larg"  placeholder="" [(ngModel)]="navir.navlarg" id="larg" name="larg" formControlName="larg" ngModel>
+                         <span class="help-block" style="color: red;" *ngIf="(larg?.invalid) && (larg?.touched)">ce champ est obligatoire</span>
+
+                        </div>
+                         
+               </div>     
+ 
+            <br>
+            <div class="form-group">
+               <button type="submit " [disabled]="F.invalid" class="btn btn-primary btn-block">Enregistrer les modifications</button>
+              </div>
+         
+             </form>
+        
+        
+        </div>
+        </div>
+      </div>
+

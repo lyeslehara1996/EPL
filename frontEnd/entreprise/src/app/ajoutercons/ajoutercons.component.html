@@ -1,0 +1,85 @@
+
+    <div class="content-wrapper" style="margin-top: 0%;"> 
+        <div class="container">
+          <div class="center">
+             <h1>Formulaire d'ajout consignataires</h1>
+            
+             
+         <form [formGroup]="ConsForm" #F="ngForm" (ngSubmit)="saveCons(F)">
+           
+             
+             
+                
+                   <!-- une fois le navire séléctioné ces info seront afficher tl q son num,pavillon tiran d'eaux  jauge brute longeur et la largeur-->
+             
+                   <div class="row col-8">
+                   <div class="form-group">
+                    <label for="cod">Code consignataire</label>
+                    <input type="number" class="form-control" id="cod" name="code" formControlName="code" ngModel  required  placeholder="">
+                  </div>
+                  
+           
+
+             <div class="form-group">
+              <label for="nomc">Nom consignataire </label><br>
+              <input type="text" class="form-control" id="nomc"  placeholder="" name="nom" formControlName="nom" ngModel  required>
+            </div>
+               
+              
+              <br>
+              
+
+              <div class="form-group">
+                <label for="ville">Ville</label><br>
+                    <input type="text" class="form-control" id="ville"  placeholder="" name="ville" formControlName="ville" ngModel  required>
+              </div>
+                    
+                   
+
+                    <div class="form-group">
+                      <label for="adr">Adresse </label><br>
+                      <input type="text" class="form-control" id="adr"  placeholder="" name="adresse" formControlName="adresse" ngModel  required>
+                    </div>
+              
+             
+              <br>
+             
+            
+            
+              <div class="form-group">
+                <label for="tel">Téléphone </label><br>
+                <input type="number" class="form-control" id="tel" placeholder="" name="telephone" formControlName="telephone" ngModel  required>
+              </div>
+                   
+                
+
+                    <div class="form-group">
+                      <label for="email">Email</label><br>
+                      <input type="email" class="form-control" id="email" placeholder="" name="email" formControlName="email" ngModel  required>
+                    </div>
+                   
+                    
+            <br>
+           
+            <div class="form-group">
+              <label for="libellé">libellé consignataire </label><br>
+              <input type="text" class="form-control" id="libellé"  placeholder="" name="libelle" formControlName="libelle" ngModel  required>
+            </div>
+                   
+          </div>
+           
+         
+            <br>
+             <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">Ajouter</button>
+             </div>
+               
+          
+         
+             </form>
+        
+        
+        </div>
+        </div>
+      </div>
+

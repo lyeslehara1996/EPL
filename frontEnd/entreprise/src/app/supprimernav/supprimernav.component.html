@@ -1,0 +1,48 @@
+<div class="content-wrapper">
+<div class="panel panel-primary" style="margin-top: 2%;">
+    <div class="panel-heading"style="margin-top: 3%;">
+      <h2 style="margin-left: 2%;">Liste navires</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Numéro Navire</th>
+            <th>Nom Navire</th>
+            <th>Pavillon</th>
+            <th>Tiran d'eau</th>
+            <th>Jauge Brute</th>
+            <th>Port d'attache</th>
+            <th>CpTV</th>
+            <th>CpTP</th>
+            <th>CpTC</th>
+            <th>Longueur</th>
+            <th>Largeur</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let p of navirs">
+          <tr >
+            <td > {{p.navnum}}</td>
+            
+            <td>{{p.navnom}}</td>
+            <td>Algerien</td>
+            <td>{{p.navlong}}</td>
+            <td>{{p.navjb}}</td>
+            <td>{{p.navport}}</td>
+            <td>{{p.navtir}}</td>
+            <td>{{p.navctp}}</td>
+            <td>{{p.navctc}}</td>
+            <td>{{p.navlarg}}</td>
+            <td>{{p.navlong}}</td>
+            <td></td>
+            <td><button  class="btn btn-danger" (click)="onDelete(p.navnum)">Supprimer</button>
+              <button  style="margin-left: 10px" (click)="onUpdate(p.navnum)" routerLink="modifnav" class="btn btn-info">Modifier</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

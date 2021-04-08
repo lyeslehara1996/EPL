@@ -1,0 +1,28 @@
+<div class="content-wrapper">
+    <div class="panel panel-primary" style="margin-top: 2%;">
+        <div class="panel-heading"style="margin-top: 3%;">
+          <h2 style="margin-left: 2%;">Liste lignes</h2>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Code ligne</th>
+                <th>Libellé ligne</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor="let p of lign">
+                <td>{{p.lgncod}}</td>
+                <td>{{p.lgnlig}}</td>
+                <td><button (click)="onDelete(p.lgncod)" class="btn btn-danger">Supprimer</button>
+                  <button  style="margin-left: 10px" (click)="onUpdateLigne(p.lgncod)" routerLink="/modifligne" class="btn btn-info">Modifier</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+    </div>
